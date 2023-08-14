@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../button/Button";
 import Container from "../container/Container";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 
 const Navbar = () => {
   const [isMobileToggled, setIsMobileToggled] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const flexBetween = "flex justify-between items-center";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(false);
+      if (window.scrollY <= 0) return;
+      setIsScrolled(true);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed w-full h-16 flex items-center z-40 bg-white">
+    <header
+      className={`${
+        isScrolled && "border-b-2 border-b-primary-200"
+      } fixed w-full h-16 flex items-center z-40 bg-white`}
+    >
       <Container>
         <div className={`${flexBetween}`}>
           <div className="text-3xl font-bold text-[#800080] ">MIKEGYM</div>
@@ -27,7 +43,7 @@ const Navbar = () => {
               isMobileToggled ? "translate-x-0" : "translate-x-full"
             } absolute top-0 right-0 md:static w-3/5 md:w-auto 
             h-screen md:h-auto z-40 md:translate-x-0 transition-all 
-            duration-300 ease-in bg-primary-300 md:bg-transparent`}
+            duration-300 ease-in bg-primary-200 md:bg-transparent`}
           >
             <ul
               className="flex flex-col md:flex-row gap-5 mt-16 md:mt-0 mx-5 md:mx-0 text-xl 
