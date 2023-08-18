@@ -3,10 +3,19 @@ import ClassesGraphic1 from "@/assets/classesGraphic1.png";
 import ClassesGraphic2 from "@/assets/classesGraphic2.png";
 import ClassesGraphic3 from "@/assets/classesGraphic3.png";
 import ClassesGraphic4 from "@/assets/classesGraphic4.png";
+import { motion } from "framer-motion";
 
-const Classes = () => {
+interface IProp {
+  setActive: (value: string) => void;
+}
+
+const Classes = ({ setActive }: IProp) => {
   return (
-    <section className="py-10 bg-primary-100">
+    <motion.section
+      id="classes"
+      className="py-10 bg-primary-100"
+      onViewportEnter={() => setActive("classes")}
+    >
       <Container>
         <h2 className="custom-heading-h2">Our classes</h2>
         <p className="md:w-3/5">
@@ -50,7 +59,7 @@ const Classes = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

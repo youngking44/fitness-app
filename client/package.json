@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+    "framer-motion": "^10.16.0",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-responsive": "^9.0.2"

@@ -32,16 +32,24 @@ const Footer = () => {
             </p>
             <div className="hidden md:flex items-center gap-5 my-5">
               <Icon>
-                <BiLogoFacebook />
+                <a href="https://web.facebook.com">
+                  <BiLogoFacebook />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoTwitter />
+                <a href="https://www.twitter.com">
+                  <BiLogoTwitter />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoInstagramAlt />
+                <a href="https://www.instagram.com">
+                  <BiLogoInstagramAlt />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoLinkedin />
+                <a href="https://www.linkedin.com">
+                  <BiLogoLinkedin />
+                </a>
               </Icon>
             </div>
           </div>
@@ -60,21 +68,29 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 mb-4">
                 <AiFillMail />
-                <span>youngking@gmail.com</span>
+                <span>mike@gmail.com</span>
               </li>
             </ul>
             <div className="flex items-center gap-5 my-5 md:hidden">
               <Icon>
-                <BiLogoFacebook />
+                <a href="https://web.facebook.com">
+                  <BiLogoFacebook />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoTwitter />
+                <a href="https://www.twitter.com">
+                  <BiLogoTwitter />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoInstagramAlt />
+                <a href="https://www.instagram.com">
+                  <BiLogoInstagramAlt />
+                </a>
               </Icon>
               <Icon>
-                <BiLogoLinkedin />
+                <a href="https://www.linkedin.com">
+                  <BiLogoLinkedin />
+                </a>
               </Icon>
             </div>
           </div>
