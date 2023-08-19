@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
-import Button from "../button/Button";
-import Container from "../container/Container";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import Logo from "@/assets/logo/mikegym.svg";
+import Button from "@/components/button/Button";
+import Container from "@/components/container/Container";
+import { AiOutlineClose, AiFillHome } from "react-icons/ai";
+import { GiProfit } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdDateRange } from "react-icons/md";
+import { BsFillTelephoneForwardFill } from "react-icons/bs";
 import Link from "@/components/link/Link";
 import { motion } from "framer-motion";
 
@@ -47,15 +52,17 @@ const Navbar = ({ active, setActive }: IProp) => {
     >
       <Container>
         <div className={`${flexBetween}`}>
-          <div className="text-3xl font-bold text-[#800080]">MIKEGYM</div>
+          <Link id="#hero">
+            <img width={150} src={Logo} alt="logoGraphic" />
+          </Link>
           <div
             className="md:hidden z-50"
             onClick={() => setIsMobileToggled(!isMobileToggled)}
           >
             {isMobileToggled ? (
-              <XMarkIcon className="w-6 h-6" />
+              <AiOutlineClose className="w-6 h-6 " />
             ) : (
-              <Bars3Icon className="w-6 h-6" />
+              <RxHamburgerMenu className="w-6 h-6 " />
             )}
           </div>
           <nav
@@ -69,12 +76,20 @@ const Navbar = ({ active, setActive }: IProp) => {
               className="flex flex-col md:flex-row gap-5 mt-16 md:mt-0 mx-5 md:mx-0 text-xl 
               md:text-base font-semibold capitalize text-white md:text-primary-500"
             >
-              <li onClick={() => handleClick("hero")}>
+              <li
+                className="flex items-center gap-2"
+                onClick={() => handleClick("hero")}
+              >
+                <AiFillHome className="md:hidden" />
                 <Link id="#hero" active={active === "hero" ? "yes" : "no"}>
                   Home
                 </Link>
               </li>
-              <li onClick={() => handleClick("benefits")}>
+              <li
+                className="flex items-center gap-2"
+                onClick={() => handleClick("benefits")}
+              >
+                <GiProfit className="md:hidden" />
                 <Link
                   id="#benefits"
                   active={active === "benefits" ? "yes" : "no"}
@@ -82,7 +97,11 @@ const Navbar = ({ active, setActive }: IProp) => {
                   Benefits
                 </Link>
               </li>
-              <li onClick={() => handleClick("classes")}>
+              <li
+                className="flex items-center gap-2"
+                onClick={() => handleClick("classes")}
+              >
+                <MdDateRange className="md:hidden" />
                 <Link
                   id="#classes"
                   active={active === "classes" ? "yes" : "no"}
@@ -90,7 +109,11 @@ const Navbar = ({ active, setActive }: IProp) => {
                   Our classes
                 </Link>
               </li>
-              <li onClick={() => handleClick("contact")}>
+              <li
+                className="flex items-center gap-2"
+                onClick={() => handleClick("contact")}
+              >
+                <BsFillTelephoneForwardFill className="md:hidden" />
                 <Link
                   id="#contact"
                   active={active === "contact" ? "yes" : "no"}
@@ -101,8 +124,12 @@ const Navbar = ({ active, setActive }: IProp) => {
             </ul>
           </nav>
           <div className="hidden md:block">
-            <span className="mr-5 font-semibold text-primary-500">Login</span>
-            <Button>Join</Button>
+            <span className="mr-5 font-semibold text-primary-500">
+              <Link id="#about">About us</Link>
+            </span>
+            <Button>
+              <Link id="#contact">Join</Link>
+            </Button>
           </div>
         </div>
       </Container>

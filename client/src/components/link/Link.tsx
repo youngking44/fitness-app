@@ -3,7 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 interface IProp {
   id: string;
-  active: string;
+  active?: string;
   children: React.ReactNode;
 }
 

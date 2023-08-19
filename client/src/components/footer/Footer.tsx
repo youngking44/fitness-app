@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="py-10 bg-primary-100">
       <Container>
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10">
+        <div id="about" className="flex flex-col md:flex-row gap-5 md:gap-10">
           <div className="flex-1 gap-5">
             <h3 className="mb-3 text-xl font-bold uppercase text-primary-500">
               About Mike Fitness Gym

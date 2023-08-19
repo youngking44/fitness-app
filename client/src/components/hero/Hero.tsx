@@ -1,6 +1,7 @@
 import Button from "../button/Button";
 import Container from "../container/Container";
 import { motion } from "framer-motion";
+import Link from "../link/Link";
 
 interface IProp {
   setActive: (value: string) => void;
@@ -46,12 +47,14 @@ const Hero = ({ setActive }: IProp) => {
               </motion.p>
             </div>
             <div className="mt-8">
-              <Button>Book now</Button>
+              <Button>
+                <Link id="#contact">Book now</Link>
+              </Button>
               <span
                 className="block md:inline-block mt-3 md:mt-0 ml-5 capitalize underline 
-              text-accent-300 cursor-pointer"
+              text-accent-300"
               >
-                Learn more
+                <Link id="#about"> Learn more</Link>
               </span>
             </div>
           </div>

@@ -12,6 +12,7 @@ export default {
         "primary-300": "#a151f1",
         "primary-400": "#782f78",
         "primary-500": "#800080",
+        "button-hover": "#c59ced",
       },
       backgroundImage: (theme) => ({
         "home-desktop": "url('./assets/homeGraphic.png')",
