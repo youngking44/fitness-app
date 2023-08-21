@@ -11,12 +11,12 @@ const Hero = ({ setActive }: IProp) => {
   return (
     <motion.section
       id="hero"
-      className="h-screen pt-16"
+      className="h-screen pt-16 bg-primary-400"
       onViewportEnter={() => setActive("hero")}
     >
       <div
-        className="w-full h-[calc(100vh-64px)] bg-home-desktop 
-        bg-right md:bg-top bg-cover bg-no-repeat"
+        className="w-full h-[calc(100vh-64px)] 
+        bg-right md:bg-top bg-home-desktop  bg-cover bg-no-repeat"
       >
         <Container>
           <div className="md:w-1/2 lg:w-2/5 pt-20 text-center text-white md:text-left">

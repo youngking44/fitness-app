@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/20/solid";
 import Button from "@/components/button/Button";
 import { motion } from "framer-motion";
+import Link from "@/components/link/Link";
 
 const leftVariants = {
   hidden: {
@@ -132,7 +133,9 @@ const Benefits = ({ setActive }: IProp) => {
                 and muscles, and improve your ability to do everyday activities.
               </p>
               <div className="mt-5 md:mt-8">
-                <Button>Join</Button>
+                <Link id="#contact">
+                  <Button>Join</Button>
+                </Link>
               </div>
             </div>
           </div>
