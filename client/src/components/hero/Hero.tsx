@@ -43,7 +43,7 @@ const Hero = ({ setActive }: IProp) => {
                 transition={{ duration: 0.7 }}
               >
                 Mike's gym is the best gym center in the city of Ibadan, we have
-                skillful and profesional instructors.
+                skillful and professional instructors.
               </motion.p>
             </div>
             <div className="mt-8">
